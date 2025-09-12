@@ -1,0 +1,13 @@
+# Frontend
+habit-coach-ui/node_modules/
+habit-coach-ui/dist/
+habit-coach-ui/.env
+
+# Backend
+habit-coach-controller/target/
+habit-coach-controller/.idea/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+*.log
