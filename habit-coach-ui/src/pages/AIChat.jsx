@@ -14,7 +14,7 @@ export default function AIChat() {
       setResponse(data);
     } catch (error) {
       console.error("AI error:", error);
-      setResponse("❌ Error: Could not connect to AI service.");
+      setResponse("❌ Error: Could not connect to AI service. Please try again later.");
     } finally {
       setLoading(false);
     }
