@@ -62,6 +62,7 @@ public class HabitController {
 
     @PostMapping("/{habitId}/log")
     public HabitLog log(@PathVariable String habitId, @Valid @RequestBody LogHabitRequest req) {
+        System.out.println("error message update to check git :Check ");
         if (!userDAO.existsById(req.userId())) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Invalid user");
         }
