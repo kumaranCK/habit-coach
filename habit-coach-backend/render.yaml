@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: habit-coach-backend
+    env: java
+    plan: free
+    rootDir: habit-coach-backend
+    buildCommand: "./mvnw clean package -DskipTests"
+    startCommand: "java -jar target/habit-coach-backend-0.0.1-SNAPSHOT.jar"
+    envVars:
+      - key: SPRING_DATA_MONGODB_URI
+        sync: false
+      - key: SPRING_DATA_REDIS_HOST
+        sync: false
+      - key: SPRING_DATA_REDIS_PORT
+        sync: false
+      - key: SPRING_DATA_REDIS_USERNAME
+        sync: false
+      - key: SPRING_DATA_REDIS_PASSWORD
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
