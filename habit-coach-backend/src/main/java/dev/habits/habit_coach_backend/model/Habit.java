@@ -1,5 +1,6 @@
 package dev.habits.habit_coach_backend.model;
 
+import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -22,10 +23,15 @@ public class Habit implements Serializable {
     private static final long serialVersionUID = 1L; // recommended for Serializable
     @Id
     private String id;
+    @NotBlank(message = "User ID is required")
     private String userId;
+
+    @NotBlank(message = "Habit name is required")
     private String name;
+
     private String description;
-    private Set<String> scheduleDays;
+
+    private Set<String> scheduleDays; // or use Set<DayOfWeek>
 
     private LocalDate createdOn;
 }

@@ -50,6 +50,7 @@ public class HabitController {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Invalid user");
         }
         log.info("Creating habit for userId={} with name={}", habit.getUserId(), habit.getName());
+        habit.setCreatedOn(LocalDate.now());
         return habitDAO.save(habit);
     }
 
